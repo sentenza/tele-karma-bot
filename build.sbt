@@ -9,7 +9,8 @@ lazy val telekarma: Project =
       name := "TelekarmaBot",
       libraryDependencies ++= Seq(
         library.scalaTest,
-        library.telegrambot
+        library.telegrambot,
+          library.slick,
       )
     )
 
@@ -23,11 +24,17 @@ lazy val library =
       val scalaTest    = "3.0.3"
       val scalamock    = "3.6.0"
       val telegramBot  = "3.0.8"
+      val slick        = "3.2.1"
+      val slf4j        = "1.6.4"
+      val hikaricp     = "1.6.4"
     }
 
     val scalaMock       = "org.scalamock"               %% "scalamock-scalatest-support" % Version.scalamock
     val scalaTest       = "org.scalatest"               %% "scalatest"            % Version.scalaTest
     val telegrambot     = "info.mukel"                  %% "telegrambot4s"        % Version.telegramBot
+    val slick           = "com.typesafe.slick"          %% "slick"                % Version.slick
+    val slf4j           = "org.slf4j"                   %% "slf4j-nop"            % Version.slf4j
+    val hikaricp        = "com.typesafe.slick"         %% "slick-hikaricp"        % Version.hikaricp
 }
 
 // *****************************************************************************
